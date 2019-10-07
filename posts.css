@@ -1,0 +1,27 @@
+h2 {
+  font-size: 4em;
+  color: #226666;
+  font-family: 'Lobster', cursive;
+}
+
+h3,
+p {
+  font-family: 'Merriweather', serif;
+}
+
+h3 {
+  letter-spacing: 3px;
+}
+
+p {
+  font-size: 1.2em;
+  letter-spacing: 1.2px;
+}
+
+img {
+  width: 100%;
+}
+
+.form-container {
+  max-width: 700px;
+}
