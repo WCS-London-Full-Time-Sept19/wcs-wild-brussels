@@ -1,0 +1,51 @@
+.sayHello,
+.contactUs {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sayHello h2 {
+  font-family: "Lobster", cursive;
+  color: #226666;
+  font-size: 4em;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: #212529;
+}
+
+.form-control {
+  height: 2rem;
+  transition-property: padding-left, background-color;
+  transition-duration: 1s;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: #707070;
+  width: 20rem;
+  font-size: 16px;
+  box-shadow: none;
+  line-height: 1.5;
+}
+
+.btn-info {
+  background-color: #226666;
+}
+
+#submittedForm {
+  background-color: grey;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+#errorMsgName,
+#errorMsgEmail,
+#errorMsgCountry,
+#errorMsgComment {
+  color: #c22609;
+}
