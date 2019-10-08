@@ -7,17 +7,19 @@ const getFormData = e => {
   let imageAlt = document.getElementById('image-alt').value;
   let text = document.getElementById('text').value;
 
-  let postObject = {};
+  console.log(title);
 
-  postObject.title = title;
-  postObject.author = author;
-  postObject.imageUrl = imageUrl;
-  postObject.imageAlt = imageAlt;
-  postObject.text = text;
+  // let postObject = {};
 
-  console.log(postObject);
+  // postObject.title = title;
+  // postObject.author = author;
+  // postObject.imageUrl = imageUrl;
+  // postObject.imageAlt = imageAlt;
+  // postObject.text = text;
+
+  // console.log(postObject);
 };
 
 const submitButton = document.getElementById('submit');
 
-submitButton.addEventListener('click', getFormData);
+submitButton.addEventListener('click', getFormData, false);

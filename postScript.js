@@ -15,7 +15,6 @@ const renderPage = () => {
       parameters[keyPairParts[0]] = keyPairParts[1]; //now assoc array
     });
 
-    console.log(parameters);
     //return required url attribute
     return parameters[key];
   }
