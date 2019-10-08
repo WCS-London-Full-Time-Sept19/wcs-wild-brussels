@@ -25,3 +25,7 @@ img {
 .form-container {
   max-width: 700px;
 }
+
+ul {
+  list-style-type: none;
+}
