@@ -1,0 +1,34 @@
+.main_image_1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/s4ejugEsnWo");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.nav1 {
+  width: 300px;
+  margin: auto;
+}
+.nav1central {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.nav1link {
+  padding: 10px;
+}
+.navendcentral {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: gray;
+}
+.date {
+  width: 100%
+  margin: auto;
+  text-align: center;
+
+}
