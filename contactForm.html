@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wild Brussels: Contact Form</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      .sayHello,
+      .contactUs {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .form-control {
+        height: 2rem;
+        transition-property: padding-left, background-color;
+        transition-duration: 1s;
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom-color: #707070;
+        width: 20rem;
+        font-size: 16px;
+        box-shadow: none;
+        line-height: 1.5;
+      }
+      #submittedForm {
+        background-color: grey;
+        text-align: center;
+        font-size: 2rem;
+      }
+      .hide {
+        display: none;
+      }
+      #errorMsgName,
+      #errorMsgEmail,
+      #errorMsgCountry,
+      #errorMsgComment {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="contactForm">
+        <div class="sayHello">
+          <h2>Say Hello!</h2>
+        </div>
+        <div class="contactUs">
+          <form name="contact">
+            <div class="form-group">
+              <label for="contactName">Your name</label>
+              <!--A-Z a-z chars; users have to input their full name with space between each word-->
+              <input
+                type="text"
+                name="username"
+                class="form-control"
+                id="contactName"
+                placeholder="Enter your name"
+                aria-required="true"
+                value=""
+                onKeyUp="checkName()"
+              />
+              <div id="errorMsgName"></div>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email address</label>
+              <!--at least 1 char followed by @; it must be at least 2 chars followed by . (structure of email)-->
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="contactEmail"
+                placeholder="Enter your email address"
+                aria-required="true"
+                value=""
+                onKeyUp="checkEmail()"
+              />
+              <div id="errorMsgEmail"></div>
+            </div>
+            <div class="form-group">
+              <!--give suggestion for the list of countries to users based on what they have typed starting from the first alphabet they have entered (not applicable for dropdown list)
+              it is required for users to select a country so it must not just show the default Select-->
+              <label for="inputCountry">Country</label>
+              <select
+                name="country"
+                id="inputCountry"
+                class="form-control"
+                onChange="checkSelect()"
+              >
+                <option value="" selected>Select a country</option>
+                <option value="UK">UK</option>
+                <option value="France">France</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Netherlands">Netherlands</option>
+              </select>
+              <div id="errorMsgCountry"></div>
+            </div>
+            <div class="form-group">
+              <!--maximum length of 500 chars; stop people from posting hyperlink and html tags if it contains https:// and left hand bracket-->
+              <label for="contactComment">Comment</label>
+              <textarea
+                class="form-control"
+                id="contactComment"
+                rows="4"
+                placeholder="Your comment here..."
+                value=""
+                onKeyUp="checkComment()"
+              ></textarea>
+              <div id="errorMsgComment"></div>
+            </div>
+            <button id="myBtn" type="submit" class="btn btn-info">
+              Submit <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <!--/div contactUs-->
+      </div>
+      <!--/div contactForm-->
+    </section>
+    <section>
+      <div id="submittedForm" class="hide">
+        <h1 id="successMsg">
+          Thank you, the contact form was submitted successfully! :)
+        </h1>
+      </div>
+    </section>
+
+    <script>
+      //1. Do make sure that all the fields have been filled in and selected by users when they have hit the submit button, otherwise, will show an error message.
+      //2. Do create a successful message for a submitted form.
+      //3. Do create divs for every field to show the error messages accordingly.
+      //4. Do check the value in each field has met the criteria.
+
+      //window.onload is only used once per page, because web page loads only once after it is refershed (well obviously).
+      window.onload = addEventList; //addEventList is a function that has a collection of click event listeners for the buttons.
+
+      function validationMessages(e) {
+        e.preventDefault(); //this is to prevent the default behaviour when the page is loaded after the submit button is clicked.
+        var name = document.getElementById("contactName").value; // load DOM
+
+        var email = document.getElementById("contactEmail").value; // load DOM
+
+        var country = document.getElementById("inputCountry"); // load DOM
+        var countrySelection = country.options[country.selectedIndex].value;
+
+        var comment = document.getElementById("contactComment").value; // load DOM
+        //var message = ""; console.log(message = "All OK")
+
+        //if-else statements that manipulate DOMs
+        //console.log(name);
+        function nameForm() {
+          if (!name) {
+            document.getElementById("errorMsgName").innerHTML = "No name";
+            return false;
+          }
+          if (!name.match(/\s/)) {
+            document.getElementById("errorMsgName").innerHTML =
+              "Please enter your full name";
+            return false;
+          }
+          return true;
+        }
+
+        function emailForm() {
+          if (!email) {
+            document.getElementById("errorMsgEmail").innerHTML = "No email";
+            return false;
+          }
+          if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/)) {
+            document.getElementById("errorMsgEmail").innerHTML =
+              "Please enter a correct email address";
+            return false;
+          }
+          return true;
+        }
+        function countryForm() {
+          if (countrySelection == "") {
+            //console.log(">>>>" + countrySelection);
+            document.getElementById("errorMsgCountry").innerHTML =
+              "Please select an option";
+            return false;
+          }
+          return true;
+        }
+        function commentForm() {
+          if (!comment) {
+            document.getElementById("errorMsgComment").innerHTML = "No comment";
+            return false;
+          }
+          if (
+            comment.length > 500 ||
+            comment.indexOf("https://") > 0 ||
+            comment.indexOf("<") > 0
+          ) {
+            document.getElementById("errorMsgComment").innerHTML =
+              "Please enter your complete message";
+            return false;
+          }
+          return true;
+        }
+
+        if (nameForm() && emailForm() && countryForm() && commentForm()) {
+          //submit form
+          document.getElementById("contactForm").classList.add("hide");
+          document.getElementById("submittedForm").classList.remove("hide");
+        }
+      }
+
+      function addEventList() {
+        document
+          .getElementById("myBtn")
+          .addEventListener("click", validationMessages); // this uses myRules function as a callback function.
+        // add more event listeners for other clickacble buttons on the same page in this function.
+      }
+
+      function checkName() {
+        var name = document.getElementById("contactName").value; // load DOM
+        if (name == 0) {
+          document.getElementById("errorMsgName").innerHTML = "No name";
+        } else if (!name.match(/^[A-Za-z\s]+$/)) {
+          document.getElementById("errorMsgName").innerHTML =
+            "Please enter letters only";
+        } else {
+          document.getElementById("errorMsgName").innerHTML = "";
+        }
+      }
+
+      function checkEmail() {
+        var email = document.getElementById("contactEmail").value; // load DOM
+        if (email == 0) {
+          document.getElementById("errorMsgEmail").innerHTML = "No email";
+        } else {
+          document.getElementById("errorMsgEmail").innerHTML = "";
+        }
+      }
+
+      function checkSelect() {
+        var country = document.getElementById("inputCountry").value; // load DOM
+        if (country == 0) {
+          document.getElementById("errorMsgCountry").innerHTML = "No country";
+        } else {
+          document.getElementById("errorMsgCountry").innerHTML = "";
+        }
+      }
+
+      function checkComment() {
+        var comment = document.getElementById("contactComment").value; // load DOM
+        if (comment == 0) {
+          document.getElementById("errorMsgComment").innerHTML = "No comment";
+        } else {
+          document.getElementById("errorMsgComment").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
