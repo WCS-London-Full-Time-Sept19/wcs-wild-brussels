@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+
+    <script>
+      var blogPosts = [
+        {
+          author: "Leanne Graham",
+          title: "Great sights in Brussels",
+          imageUrl: "https://source.unsplash.com/m39OKAexaqo",
+          imageAlt: "Belgian cities",
+          date: "20/05/2017",
+          text:
+            "Wake up human for food at 4am leave dead animals as gifts, yet kitty scratches couch bad kitty yet human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken!. Leave dead animals as gifts claw drapes jump off balcony, onto stranger's head have secret plans so scratch pee on walls it smells like breakfast and litter box is life. Demand to have some of whatever the human is cooking, then sniff the offering and walk away a nice warm laptop for me to sit on run as fast as i can into another room for no reason. Go into a room to decide you didn't want to be in there anyway tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad for i’m so hungry i’m so hungry but ew not for that , but man running from cops stops to pet cats, goes to jail. Demand to be let outside at once, and expect owner to wait for me as i think about it chase after silly colored fish toys around the house with tail in the air. Sleep on keyboard shove bum in owner's face like camera lens. Plop down in the middle where everybody walks. Lay on arms while you're using the keyboard human is washing you why halp oh the horror flee scratch hiss bite, i hate cucumber pls dont throw it at me proudly present butt to human love you, then bite you for cat dog hate mouse eat string barf pillow no baths hate everything, or behind the couch."
+        },
+        {
+          author: "Ervin Howell",
+          title: "Visit to the Atomium",
+          imageUrl: "https://source.unsplash.com/5ivJSXgZigY",
+          imageAlt: "Atomium",
+          date: "02/07/2018",
+          text:
+            "Well the first thing you know ol' Jeds a millionaire. Kinfolk said Jed move away from there! The mate was a mighty sailin' man the Skipper brave and sure. Five passengers set sail that day for a three hour tour a three hour tour. Believe it or not I'm walking on air. I never thought I could feel so free. Flying away on a wing and a prayer. Who could it be? Believe it or not its just me. Doin' it our way. There's nothing we wont try. Never heard the word impossible. This time there's no stopping us. Well we're movin' on up to the east side to a deluxe apartment in the sky. Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Doin' it our way. There's nothing we wont try. Never heard the word impossible. This time there's no stopping us."
+        },
+        {
+          author: "Clementine Bauch",
+          title: "Buildings buildings buildings...",
+          imageUrl: "https://source.unsplash.com/zMbxBDg4qBc",
+          imageAlt: "Arial view of buildings",
+          date: "15/10/2018",
+          content:
+            "Lorem ipsum dolor amet shoreditch flannel literally blue bottle chambray seitan occupy marfa. Etsy PBR&B tousled, shabby chic semiotics blue bottle aesthetic pitchfork dreamcatcher ugh. Yuccie narwhal XOXO post-ironic yr jianbing cold-pressed heirloom scenester. Succulents taxidermy PBR&B single-origin coffee squid cray tumblr ethical. Flexitarian stumptown freegan twee cardigan. Distillery authentic seitan, kombucha banh mi drinking vinegar kinfolk vinyl roof party franzen shoreditch snackwave craft beer. Adaptogen biodiesel migas swag beard glossier vinyl. Literally pork belly enamel pin, typewriter iceland activated charcoal 8-bit biodiesel edison bulb bitters. Tattooed YOLO four loko migas adaptogen, letterpress ethical typewriter poke unicorn DIY."
+        },
+        {
+          author: "Leanne Graham",
+          title: "Great sights in Brussels",
+          imageUrl: "https://source.unsplash.com/m39OKAexaqo",
+          imageAlt: "Belgian cities",
+          date: "20/05/2017",
+          text:
+            "Wake up human for food at 4am leave dead animals as gifts, yet kitty scratches couch bad kitty yet human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken!. Leave dead animals as gifts claw drapes jump off balcony, onto stranger's head have secret plans so scratch pee on walls it smells like breakfast and litter box is life. Demand to have some of whatever the human is cooking, then sniff the offering and walk away a nice warm laptop for me to sit on run as fast as i can into another room for no reason. Go into a room to decide you didn't want to be in there anyway tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad for i’m so hungry i’m so hungry but ew not for that , but man running from cops stops to pet cats, goes to jail. Demand to be let outside at once, and expect owner to wait for me as i think about it chase after silly colored fish toys around the house with tail in the air. Sleep on keyboard shove bum in owner's face like camera lens. Plop down in the middle where everybody walks. Lay on arms while you're using the keyboard human is washing you why halp oh the horror flee scratch hiss bite, i hate cucumber pls dont throw it at me proudly present butt to human love you, then bite you for cat dog hate mouse eat string barf pillow no baths hate everything, or behind the couch."
+        },
+        {
+          author: "Ervin Howell",
+          title: "Visit to the Atomium",
+          imageUrl: "https://source.unsplash.com/5ivJSXgZigY",
+          imageAlt: "Atomium",
+          date: "02/07/2018",
+          text:
+            "Well the first thing you know ol' Jeds a millionaire. Kinfolk said Jed move away from there! The mate was a mighty sailin' man the Skipper brave and sure. Five passengers set sail that day for a three hour tour a three hour tour. Believe it or not I'm walking on air. I never thought I could feel so free. Flying away on a wing and a prayer. Who could it be? Believe it or not its just me. Doin' it our way. There's nothing we wont try. Never heard the word impossible. This time there's no stopping us. Well we're movin' on up to the east side to a deluxe apartment in the sky. Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Doin' it our way. There's nothing we wont try. Never heard the word impossible. This time there's no stopping us."
+        },
+        {
+          author: "Clementine Bauch",
+          title: "Buildings buildings buildings...",
+          imageUrl: "https://source.unsplash.com/zMbxBDg4qBc",
+          imageAlt: "Arial view of buildings",
+          date: "15/10/2018",
+          content:
+            "Lorem ipsum dolor amet shoreditch flannel literally blue bottle chambray seitan occupy marfa. Etsy PBR&B tousled, shabby chic semiotics blue bottle aesthetic pitchfork dreamcatcher ugh. Yuccie narwhal XOXO post-ironic yr jianbing cold-pressed heirloom scenester. Succulents taxidermy PBR&B single-origin coffee squid cray tumblr ethical. Flexitarian stumptown freegan twee cardigan. Distillery authentic seitan, kombucha banh mi drinking vinegar kinfolk vinyl roof party franzen shoreditch snackwave craft beer. Adaptogen biodiesel migas swag beard glossier vinyl. Literally pork belly enamel pin, typewriter iceland activated charcoal 8-bit biodiesel edison bulb bitters. Tattooed YOLO four loko migas adaptogen, letterpress ethical typewriter poke unicorn DIY."
+        },
+        {
+          author: "Leanne Graham",
+          title: "Great sights in Brussels",
+          imageUrl: "https://source.unsplash.com/m39OKAexaqo",
+          imageAlt: "Belgian cities",
+          date: "20/05/2017",
+          text:
+            "Wake up human for food at 4am leave dead animals as gifts, yet kitty scratches couch bad kitty yet human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken!. Leave dead animals as gifts claw drapes jump off balcony, onto stranger's head have secret plans so scratch pee on walls it smells like breakfast and litter box is life. Demand to have some of whatever the human is cooking, then sniff the offering and walk away a nice warm laptop for me to sit on run as fast as i can into another room for no reason. Go into a room to decide you didn't want to be in there anyway tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad for i’m so hungry i’m so hungry but ew not for that , but man running from cops stops to pet cats, goes to jail. Demand to be let outside at once, and expect owner to wait for me as i think about it chase after silly colored fish toys around the house with tail in the air. Sleep on keyboard shove bum in owner's face like camera lens. Plop down in the middle where everybody walks. Lay on arms while you're using the keyboard human is washing you why halp oh the horror flee scratch hiss bite, i hate cucumber pls dont throw it at me proudly present butt to human love you, then bite you for cat dog hate mouse eat string barf pillow no baths hate everything, or behind the couch."
+        },
+        {
+          author: "Ervin Howell",
+          title: "Visit to the Atomium",
+          imageUrl: "https://source.unsplash.com/5ivJSXgZigY",
+          imageAlt: "Atomium",
+          date: "02/07/2018",
+          text:
+            "Well the first thing you know ol' Jeds a millionaire. Kinfolk said Jed move away from there! The mate was a mighty sailin' man the Skipper brave and sure. Five passengers set sail that day for a three hour tour a three hour tour. Believe it or not I'm walking on air. I never thought I could feel so free. Flying away on a wing and a prayer. Who could it be? Believe it or not its just me. Doin' it our way. There's nothing we wont try. Never heard the word impossible. This time there's no stopping us. Well we're movin' on up to the east side to a deluxe apartment in the sky. Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Doin' it our way. There's nothing we wont try. Never heard the word impossible. This time there's no stopping us."
+        },
+        {
+          author: "Clementine Bauch",
+          title: "Buildings buildings buildings...",
+          imageUrl: "https://source.unsplash.com/zMbxBDg4qBc",
+          imageAlt: "Arial view of buildings",
+          date: "15/10/2018",
+          content:
+            "Lorem ipsum dolor amet shoreditch flannel literally blue bottle chambray seitan occupy marfa. Etsy PBR&B tousled, shabby chic semiotics blue bottle aesthetic pitchfork dreamcatcher ugh. Yuccie narwhal XOXO post-ironic yr jianbing cold-pressed heirloom scenester. Succulents taxidermy PBR&B single-origin coffee squid cray tumblr ethical. Flexitarian stumptown freegan twee cardigan. Distillery authentic seitan, kombucha banh mi drinking vinegar kinfolk vinyl roof party franzen shoreditch snackwave craft beer. Adaptogen biodiesel migas swag beard glossier vinyl. Literally pork belly enamel pin, typewriter iceland activated charcoal 8-bit biodiesel edison bulb bitters. Tattooed YOLO four loko migas adaptogen, letterpress ethical typewriter poke unicorn DIY."
+        }
+      ];
+
+      var spec = {
+        numPerPage: 5,
+        selectPage: 5
+      };
+
+      //console.log(blogPosts.length);
+      var pages = blogPosts.length / spec.numPerPage;
+      //console.log(pages);
+
+      window.onload = init;
+
+      //access to the page-link number
+      function init() {
+        //var i;
+        let buttonList = document.getElementById("buttonList");
+        let refNode = document.getElementById("nextButton");
+        for (let i = 0; i < spec.numPerPage; i++) {
+          let li = document.createElement("li");
+          li.classList.add("page-item");
+          let a = document.createElement("a");
+          a.classList.add("page-link");
+          a.href = "pagination.html?page=" + (i + 1);
+          let aText = document.createTextNode(i + 1);
+          a.appendChild(aText);
+          li.appendChild(a);
+          buttonList.insertBefore(li, refNode);
+          //console.log(buttonList);
+        }
+        //Get the value "link disable" of the onclick attribute of a button element Previous and Next
+        if (spec.selectPage == 1) {
+          var prevButton = document.getElementById("prevButton");
+          prevButton.classList.add("disabled");
+        }
+        if (spec.selectPage == 5) {
+          var nextButton = document.getElementById("nextButton");
+          nextButton.classList.add("disabled");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Wild Brussels</h1>
+    <!-- custom CSS -->
+
+    <style>
+      .flex-container {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+      }
+      .page-item {
+        text-align: center;
+        align-self: baseline;
+      }
+      .holder {
+        width: 500px;
+        margin: auto;
+      }
+      .linkDisable {
+        opacity: 0.3;
+      }
+    </style>
+
+    <!-- Pagination Begin -->
+    <div class="holder">
+      <div class="flex-container">
+        <nav aria-label="Page navigation">
+          <ul id="buttonList" class="pagination">
+            <li class="page-item" id="prevButton">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+
+            <li class="page-item" id="nextButton">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Pagination End -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
