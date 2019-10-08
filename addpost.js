@@ -1,3 +1,5 @@
+window.onload = addEvents;
+
 // get form content
 const getFormData = e => {
   e.preventDefault();
@@ -9,17 +11,24 @@ const getFormData = e => {
 
   console.log(title);
 
-  // let postObject = {};
+  let postObject = {};
 
-  // postObject.title = title;
-  // postObject.author = author;
-  // postObject.imageUrl = imageUrl;
-  // postObject.imageAlt = imageAlt;
-  // postObject.text = text;
+  // TODO: insert current date
+  let date = setdate();
+  // TODO: validate and sanitise input
 
-  // console.log(postObject);
+  postObject.title = title;
+  postObject.author = author;
+  postObject.date = date;
+  postObject.imageUrl = imageUrl;
+  postObject.imageAlt = imageAlt;
+  postObject.text = text;
+
+  console.log(postObject);
 };
 
-const submitButton = document.getElementById('submit');
+function addEvents() {
+  const submitButton = document.getElementById('submit');
 
-submitButton.addEventListener('click', getFormData, false);
+  submitButton.addEventListener('click', getFormData, false);
+}
