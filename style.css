@@ -124,6 +124,11 @@ ul {
   border: 0px solid #999999;
   border-radius: 0px;
 }
+
+label.onoffswitch3-label {
+  margin-bottom: 0;
+}
+
 .onoffswitch3-inner {
   display: block;
   width: 200%;
@@ -173,7 +178,7 @@ ul {
   bottom: 0;
 }
 .onoffswitch3-active .onoffswitch3-switch {
-  background: #27a1ca;
+  background: #226666;
   left: 0;
   width: 160px;
 }
