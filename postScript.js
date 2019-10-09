@@ -75,6 +75,7 @@ const renderPage = () => {
         blogDate.appendChild(blogDateText);
 
         let blogPostContainer = document.createElement('div');
+        blogPostContainer.classList.add('post-container');
 
         let blogImage = document.createElement('img');
         blogImage.classList.add('img-fluid');
