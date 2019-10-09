@@ -1,3 +1,12 @@
+/* Navbar */
+
+.navbar-dark .navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+}
+
+/* Posts */
+
 h2 {
   font-size: 4em;
   color: #226666;
@@ -25,6 +34,22 @@ img {
 .form-container {
   max-width: 700px;
 }
+
+/* article animation */
+article {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* footer */
 
 ul {
   list-style-type: none;
