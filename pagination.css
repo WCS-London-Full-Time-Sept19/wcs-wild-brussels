@@ -1,0 +1,24 @@
+/*.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.page-item {
+  text-align: center;
+  align-self: baseline;
+}
+.holder {
+  width: 500px;
+  margin: auto;
+}
+.linkDisable {
+  opacity: 0.3;
+}
+.a .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}*/
