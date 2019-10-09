@@ -5,6 +5,10 @@
   font-size: 2em;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* Posts */
 
 h2 {
@@ -13,12 +17,12 @@ h2 {
   font-family: 'Lobster', cursive;
 }
 
-h3,
 p {
   font-family: 'Merriweather', serif;
 }
 
 h3 {
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
 }
 
@@ -50,6 +54,10 @@ article {
 }
 
 /* footer */
+
+footer {
+  font-family: 'Montserrat', sans-serif;
+}
 
 ul {
   list-style-type: none;
