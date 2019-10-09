@@ -2,11 +2,10 @@
 .contactUs {
   display: flex;
   justify-content: center;
-  /* margin-top: 50px; */
 }
 
 .sayHello h2 {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   color: #226666;
   font-size: 4em;
 }
@@ -38,19 +37,30 @@ label {
   border-color: #226666;
 }
 
-#submittedForm {
-  background-color: grey;
-  text-align: center;
-  font-size: 2rem;
-}
-
 .hide {
   display: none;
 }
 
-#errorMsgName,
-#errorMsgEmail,
-#errorMsgCountry,
-#errorMsgComment {
+.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #226666;
+  font-size: 2rem;
+  text-align: center;
+  height: 20rem;
+  margin: 45px 0;
+}
+
+.errorMsg {
   color: #c22609;
+}
+
+.showSuccessMsg span {
+  color: white;
+}
+
+.showSuccessMsg {
+  color: #212529;
+  font-weight: 700;
 }

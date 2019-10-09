@@ -96,7 +96,10 @@ function validationMessages(e) {
   if (nameValidated && emailValidated && countryValidated && commentValidated) {
     //submit form
     document.getElementById("contactForm").classList.add("hide");
-    document.getElementById("submittedForm").classList.remove("hide");
+    document.getElementById("submittedForm").classList.add("show");
+    var updateName = document.getElementById("successMsg").innerHTML;
+    var displayName = updateName.replace("inputName", name);
+    document.getElementById("successMsg").innerHTML = displayName;
   }
 }
 
