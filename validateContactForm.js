@@ -34,12 +34,14 @@ function validationMessages(e) {
   //if-else statements that manipulate DOMs
   //console.log(name);
   function nameForm() {
-    if (!name) {
+    var trimmedName = name.trim(); //string operation to sanitise users inputs
+
+    if (!trimmedName) {
       document.getElementById("errorMsgName").innerHTML =
         "No name has been entered.";
       return false;
     }
-    if (!name.match(/\s/)) {
+    if (!trimmedName.match(/\s/)) {
       document.getElementById("errorMsgName").innerHTML =
         "Please enter your full name.";
       return false;
@@ -102,17 +104,22 @@ function addEventList() {
   document
     .getElementById("myBtn")
     .addEventListener("click", validationMessages); // this uses myRules function as a callback function.
-  // add more event listeners for other clickacble buttons on the same page in this function.
+  // add more event listeners for other clickable buttons on the same page in this function.
 }
 
-//validate inputs while user are typing
+//validate inputs while users are typing
 function checkName() {
   var name = document.getElementById("contactName").value; // load DOM
+
   if (name == 0) {
     document.getElementById("errorMsgName").innerHTML = "No name";
   } else if (!name.match(/^[A-Za-z\s]+$/)) {
-    document.getElementById("errorMsgName").innerHTML =
-      "Please enter letters only";
+    var numberIsNotAllowed = document.getElementById("contactName").value;
+    numberIsNotAllowed = numberIsNotAllowed.substring(
+      0,
+      numberIsNotAllowed.length - 1
+    );
+    document.getElementById("contactName").value = numberIsNotAllowed;
   } else {
     document.getElementById("errorMsgName").innerHTML = "";
   }
@@ -136,8 +143,18 @@ function checkSelect() {
   }
 }
 
-function checkComment() {
+function checkComment(e) {
+  //console.log(e);
+
+  if (e.key == "Enter") {
+    //console.log("you clicked enter");
+    var enterKeyPressed = document.getElementById("contactComment").value;
+    enterKeyPressed = enterKeyPressed.substring(0, enterKeyPressed.length - 1);
+    document.getElementById("contactComment").value = enterKeyPressed;
+  }
+
   var comment = document.getElementById("contactComment").value; // load DOM
+
   if (comment == 0) {
     document.getElementById("errorMsgComment").innerHTML = "No comment";
   } else {
