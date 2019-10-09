@@ -19,5 +19,5 @@ function setImage() {
     } else {
       currentImage += 1;
     }
-  }, 2000);
+  }, 3000);
 }
