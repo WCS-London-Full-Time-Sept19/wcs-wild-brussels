@@ -45,6 +45,14 @@
   border-color: #226666;
 }
 
+a {
+  color: #419696;
+}
+
+a:hover {
+  color: #317272;
+}
+
 /* Navbar */
 
 .navbar-dark .navbar-brand {
@@ -172,14 +180,14 @@ label.onoffswitch3-label {
 }
 .onoffswitch3-inner .onoffswitch3-active {
   padding-left: 10px;
-  background-color: #eeeeee;
-  color: #ffffff;
+  background-color: #4a535c;
+  color: #c7c7c7;
 }
 .onoffswitch3-inner .onoffswitch3-inactive {
   width: 100px;
   padding-left: 16px;
-  background-color: #eeeeee;
-  color: #ffffff;
+  background-color: #343a40;
+  color: #c7c7c7;
   text-align: right;
 }
 .onoffswitch3-switch {
@@ -216,5 +224,5 @@ label.onoffswitch3-label {
   border: 2px solid #fff;
 }
 .scroll-text {
-  color: #000;
+  color: #c7c7c7;
 }

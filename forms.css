@@ -29,6 +29,10 @@
   line-height: 1.5;
 }
 
+label {
+  display: none;
+}
+
 .btn-info {
   background-color: #226666;
   border-color: #226666;
