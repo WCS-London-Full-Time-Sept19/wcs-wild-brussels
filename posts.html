@@ -29,7 +29,7 @@
     ></script>
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="posts.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Wild Brussels</title>
   </head>
@@ -77,14 +77,43 @@
 
     <!-- Add pagination below -->
 
+    <!-- Pagination Begin -->
+    <div class="container mt-5 d-flex justify-content-end">
+      <div>
+        <nav aria-label="Page navigation">
+          <ul id="buttonList" class="pagination">
+            <li class="page-item" id="prevButton">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item" id="nextButton">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Pagination End -->
+
     <!-- Footer -->
     <footer class="text-center  mt-5 bg-dark p-5 text-light">
       <div class="row">
         <div class="col-4">
           <ul>
-            <li>News</li>
-            <li>Attractions</li>
-            <li>Sights</li>
+            <li>
+              <a href="http://www.facebook.com" target="_blank"
+                ><i class="fab fa-facebook-square"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="http://www.twitter.com" target="_blank"
+                ><i class="fab fa-twitter-square"></i> Twitter</a
+              >
+            </li>
+            <li>
+              <a href="http://www.instagram.com" target="_blank"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </li>
           </ul>
         </div>
         <div class="col-4">
@@ -106,7 +135,11 @@
 
     <!--  Posts Object  -->
     <script src="postObject.js"></script>
-    <!-- Render Posts and Pagination -->
+    <!-- get Url Params -->
+    <script src="getUrlParams.js"></script>
+    <!-- Pagination -->
+    <script src="pagination.js"></script>
+    <!-- Render Posts  -->
     <script src="postScript.js"></script>
 
     <!-- Optional JavaScript -->
