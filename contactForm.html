@@ -65,7 +65,7 @@
         <div class="contactUs">
           <form name="contact">
             <div class="form-group">
-              <label for="contactName">Name</label>
+              <label for="contactName">Full Name</label>
               <!--A-Z a-z chars; users have to input their full name with space between each word-->
               <input
                 type="text"
@@ -80,7 +80,7 @@
               <div id="errorMsgName"></div>
             </div>
             <div class="form-group">
-              <label for="contactEmail">Email address</label>
+              <label for="contactEmail">Email Address</label>
               <!--at least 1 char followed by @; it must be at least 2 chars followed by . (structure of email)-->
               <input
                 type="email"
@@ -121,7 +121,7 @@
                 rows="4"
                 placeholder="Your comment here..."
                 value=""
-                onKeyUp="checkComment()"
+                onKeyUp="checkComment(event);"
               ></textarea>
               <div id="errorMsgComment"></div>
             </div>
