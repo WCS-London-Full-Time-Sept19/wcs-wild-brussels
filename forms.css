@@ -5,7 +5,7 @@
 }
 
 .sayHello h2 {
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   color: #226666;
   font-size: 4em;
 }
@@ -22,7 +22,7 @@
   background-color: transparent;
   border-color: transparent;
   border-bottom-color: #707070;
-  width: 30rem;
+  max-width: 30rem;
   font-size: 16px;
   box-shadow: none;
   line-height: 1.5;
