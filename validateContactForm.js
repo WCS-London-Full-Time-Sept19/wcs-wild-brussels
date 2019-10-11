@@ -96,7 +96,9 @@ function validationMessages(e) {
   if (nameValidated && emailValidated && countryValidated && commentValidated) {
     //submit form
     document.getElementById("contactForm").classList.add("hide");
-    document.getElementById("submittedForm").classList.add("show");
+    document
+      .getElementById("submittedForm")
+      .classList.add("showSuccessMessage");
     var updateName = document.getElementById("successMsg").innerHTML;
     var displayName = updateName.replace("inputName", name);
     document.getElementById("successMsg").innerHTML = displayName;
@@ -106,7 +108,7 @@ function validationMessages(e) {
 function addEventList() {
   document
     .getElementById("myBtn")
-    .addEventListener("click", validationMessages); // this uses myRules function as a callback function.
+    .addEventListener("click", validationMessages); // this uses myRules function in relevant to higher-order function principal.
   // add more event listeners for other clickable buttons on the same page in this function.
 }
 

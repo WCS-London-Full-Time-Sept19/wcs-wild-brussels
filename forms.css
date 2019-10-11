@@ -5,7 +5,7 @@
 }
 
 .sayHello h2 {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   color: #226666;
   font-size: 4em;
 }
@@ -22,7 +22,6 @@
   background-color: transparent;
   border-color: transparent;
   border-bottom-color: #707070;
-  max-width: 30rem;
   font-size: 16px;
   box-shadow: none;
   line-height: 1.5;
@@ -41,7 +40,7 @@ label {
   display: none;
 }
 
-.show {
+.showSuccessMessage {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,4 +62,14 @@ label {
 .showSuccessMsg {
   color: #212529;
   font-weight: 700;
+}
+
+.form-group {
+  width: 25rem;
+}
+
+@media screen and (max-width: 467px) {
+  .form-group {
+    width: 20rem;
+  }
 }
