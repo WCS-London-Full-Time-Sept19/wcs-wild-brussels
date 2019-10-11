@@ -149,6 +149,7 @@ ul {
   cursor: pointer;
   border: 0px solid #999999;
   border-radius: 0px;
+  background-color: #4a535c;
 }
 
 label.onoffswitch3-label {
